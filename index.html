@@ -15,6 +15,7 @@
     <style>
         body {
             text-align: center;
+            font-family: sans-serif;
         }
 
         .row-1,
@@ -40,6 +41,55 @@
             border: solid 4px #000;
             padding: 25px;
             font-size: 50px;
+        }
+
+        ul {
+            list-style-type: none;
+        }
+
+        button {
+            padding: 10px;
+            cursor: pointer;
+            border-radius: 20px;
+            margin: 10px;
+        }
+
+        .dfs {
+            background-color: #fff;
+            color: #35d28b;
+            border-color: #35d28b;
+        }
+
+        .dfs:hover {
+            background-color: #35d28b;
+            color: #fff;
+        }
+
+        .bfs {
+            color: #ffd976;
+            border-color: #ffd976;
+            background-color: #000;
+        }
+
+        .bfs:hover {
+            color: #000;
+            background-color: #ffd976;
+        }
+
+        .hill-climbing {
+            color: #7ad4dc;
+            border-color: #7ad4dc;
+            background-color: #fff;
+        }
+
+        .hill-climbing:hover {
+            background-color: #7ad4dc;
+            color: #fff;
+        }
+
+        #finalPathList {
+            color: #35d28b;
+            /* background-color: #ffd976; */
         }
     </style>
 </head>
@@ -219,6 +269,13 @@
         <button class="dfs">DFS (Depth First Search)</button>
         <button class="bfs">BFS (Breadth First Search)</button>
         <button class="hill-climbing">Hill Climbing Algorithm</button>
+    </div>
+
+    <div class="result">
+        <h2>Moves:</h2>
+        <ul id="movesList"></ul>
+        <h2>Final Path:</h2>
+        <ul id="finalPathList"></ul>
     </div>
 
     <script src="horse.js"></script>
